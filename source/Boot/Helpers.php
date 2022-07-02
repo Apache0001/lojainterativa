@@ -22,6 +22,21 @@ function url(string $path = null): string
     
 }
 
+function route(string $path = null): string
+{
+    if (strpos($_SERVER['HTTP_HOST'], "localhost")){
+        if($path){
+            return CONF_URL_TEST . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
+        }
+        return CONF_URL_TEST;
+    }
+    if($path){
+        return CONF_URL_BASE . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
+    }
+    return CONF_URL_BASE;
+    
+}
+
 ################
 ### PASSWORD ###
 ################
@@ -125,16 +140,16 @@ function date_fmt_app(?string $date = null): string
 
 
 
-function theme(string $path = null, $theme = CONF_VIEW_THEME): string
+function asset(string $path = null, $theme = CONF_VIEW_THEME): string
 {
     if (strpos($_SERVER['HTTP_HOST'], "localhost")){
         if($path){
-            return CONF_URL_TEST . "/themes/{$theme}". "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
+            return CONF_URL_TEST . "/themes/{$theme}/assets/". "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
         }
-        return CONF_URL_TEST. "/themes/{$theme}";
+        return CONF_URL_TEST. "/themes/{$theme}/assets/";
     }
     if($path){
-        return CONF_URL_BASE . "/themes/{$theme}" . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
+        return CONF_URL_BASE . "/themes/{$theme}/assets" . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
     }
-    return CONF_URL_BASE. "/themes/{$theme}";
+    return CONF_URL_BASE. "/themes/{$theme}/assets";
 }

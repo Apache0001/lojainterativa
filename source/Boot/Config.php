@@ -21,8 +21,8 @@ define("CONF_URL_ADMIN", "/admin");
 ############
 define('CONF_VIEW_PATH', __DIR__.'/../../themes');
 define('CONF_VIEW_EXT', 'php');
-define('CONF_VIEW_THEME_POST', 'Post');
-define('CONF_VIEW_THEME', 'Post');
+define('CONF_VIEW_THEME_ADMIN', 'Admin');
+define('CONF_VIEW_THEME', 'Admin');
 
 
 ##############

@@ -12,6 +12,9 @@ $route->namespace('Source\App');
 $route->get('/', 'PostController:home');
 
 
+#login
+$route->post('/login','AuthController:login');
+
 /**
  * ROUTE
  */

@@ -35,6 +35,9 @@
             });
     </script>
 
+
+
+CONF_VIEW_THEME_ADMIN
 </body>
 </html>
 

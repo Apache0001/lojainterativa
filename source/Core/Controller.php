@@ -23,10 +23,11 @@ class Controller
     /**
      * construct
      */
-    public function __construct(string $pathToViews)
+    public function __construct(string $pathToViews, $router)
     {
         $this->message = new Message();
         $this->view = new View($pathToViews);
+        $this->router = $router;
         
     }
 }
