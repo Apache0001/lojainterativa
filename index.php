@@ -9,11 +9,8 @@ $route = new Router(url(), ':');
 $route->namespace('Source\App');
 
 #posts
-$route->get('/', 'PostController:home');
-
-
-#login
-$route->post('/login','AuthController:login');
+$route->get('/', 'WebController:home');
+$route->post('/cadastrar', 'WebController:cadastrar');
 
 /**
  * ROUTE

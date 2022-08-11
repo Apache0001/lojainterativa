@@ -8,34 +8,31 @@ $route = new Router(url(), ':');
 
 
 ##############
-#### WEB #####
-##############
-
-
-
-
-##############
 #### API #####
 ##############
 $route->namespace('Source\App\Api');
 
-#users
-$route->get('/users', 'User:getUsers');
-$route->get('/users/{id}', 'User:getUser');
-$route->post('/users', 'User:postUser');
-$route->put('/users/{id}', 'User:updateUser');
-$route->delete('/users/{id}', 'User:deleteUser');
-
-#posts
-$route->get('/posts', 'Posts:getPosts');
-$route->get('/posts/{id}', 'Posts:getPost');
-$route->post('/posts', 'Posts:postPost');
-$route->delete('/posts', 'Posts:deletePost');
-$route->put('/posts', 'Posts:updatePost');
+#produtos
+$route->get('/produto', 'Produto:getProdutos');
+$route->get('/produto/{id}', 'Produto:getProduto');
+$route->post('/produto', 'Produto:postProduto');
+$route->put('/produto/{id}', 'Produto:updateProduto');
+$route->delete('/produto/{id}', 'Produto:deleteProduto');
 
 #categorias
-$route->get('/categories', 'Categories:getCategories');
-$route->get('/categories/{id}', 'Categories:getCategory');
+$route->get('/categoria', 'Categoria:getCategorias');
+$route->get('/categoria/{id}', 'Categoria:getCategoria');
+$route->post('/categoria', 'Categoria:postCategoria');
+$route->put('/categoria/{id}', 'Categoria:updateCategoria');
+$route->delete('/categoria/{id}', 'Categoria:deleteCategoria');
+
+#fabricante
+$route->get('/fabricante', 'Fabricante:getFabricantes');
+$route->get('/fabricante/{id}', 'Fabricante:getFabricante');
+$route->post('/fabricante', 'Fabricante:postFabricante');
+$route->delete('/fabricante/{id}', 'Fabricante:deleteFabricante');
+$route->put('/fabricante/{id}', 'Fabricante:updateFabricante');
+
 
 
 /**

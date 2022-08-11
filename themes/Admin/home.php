@@ -20,6 +20,8 @@
       <div class="login">
           <!-- form -->
             <form class="form" action="<?= route('/login') ;?>" method="post" autocomplete="off">
+                <!-- csrf -->
+                <?= csrf_input();?>
                 <div class="form_social">
                     <a href="" class="btn btn-facebook">Facebook Login</a>
                     <a href="" class="btn btn-google">Google Login</a>

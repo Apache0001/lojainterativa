@@ -55,7 +55,7 @@ abstract class Model
     public function __construct(string $entity, array $protected, array $required)
     {
         self::$entity = $entity;
-        self::$protected = array_merge($protected, ['date_added', "date_modified"]);
+        self::$protected = array_merge($protected, ['created_at', "updated_at"]);
         self::$required = $required;
         $this->message = new Message();
     }
@@ -336,10 +336,6 @@ abstract class Model
      public function save(): bool
      {
 
-         /* if(!$this->required()){
-             $this->message->warning('Preencha todos os campos para continuar');
-             return false;
-         } */
 
          /** Update */
          if(!empty($this->id)){

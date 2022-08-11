@@ -4,6 +4,7 @@ namespace Source\Models;
 
 use Source\Core\Model;
 use Source\Core\Session;
+use Source\Models\User;
 
 /**
  * Class Auth
@@ -13,6 +14,11 @@ use Source\Core\Session;
  */
 class Auth extends Model
 {
+
+    public function __construct()
+    {
+        parent::__construct('',[],[]);
+    }
     /**
      * user
      *

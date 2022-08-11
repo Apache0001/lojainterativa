@@ -4,10 +4,12 @@ namespace Source\Models;
 
 use Source\Core\Model;
 
-class Posts extends Model
+class Categoria extends Model
 {
     public function __construct()
     {
-        parent::__construct('posts',['id'],[]);
+        parent::__construct('categorias',[''],['']);
     }
+
+
 }

@@ -4,11 +4,11 @@ namespace Source\Models;
 
 use Source\Core\Model;
 
-class Categories extends Model
+class Fabricante extends Model
 {
     public function __construct()
     {
-        parent::__construct('categories',[''],['']);
+        parent::__construct('fabricantes',[''],['']);
     }
 
 

@@ -4,7 +4,7 @@
 ### DATABASE ###
 ################
 define("CONF_DB_HOST", "localhost");
-define("CONF_DB_NAME", "fullstackphp");
+define("CONF_DB_NAME", "lojainterativa");
 define("CONF_DB_USER","root");
 define("CONF_DB_PASSWD", "");
 
@@ -12,8 +12,8 @@ define("CONF_DB_PASSWD", "");
 ####################
 ### PROJECT URLs ###
 ####################
-define("CONF_URL_BASE", "http://localhost/Blog");
-define("CONF_URL_TEST", "http://localhost/Blog");
+define("CONF_URL_BASE", "http://localhost/projeto");
+define("CONF_URL_TEST", "http://localhost/projeto");
 define("CONF_URL_ADMIN", "/admin");
 
 ############
@@ -22,7 +22,8 @@ define("CONF_URL_ADMIN", "/admin");
 define('CONF_VIEW_PATH', __DIR__.'/../../themes');
 define('CONF_VIEW_EXT', 'php');
 define('CONF_VIEW_THEME_ADMIN', 'Admin');
-define('CONF_VIEW_THEME', 'Admin');
+define('CONF_VIEW_THEME', 'Web');
+define('CONF_VIEW_THEME_DASH','Dash');
 
 
 ##############
@@ -44,11 +45,11 @@ define("CONF_DATE_APP", "Y-m-d H:i:s");
 ###############
 ### MESSAGE ###
 ###############
-define("CONF_MESSAGE_WARNING",'');
-define("CONF_MESSAGE_SUCCESS",'');
-define("CONF_MESSAGE_ERROR", '');
-define('CONF_MESSAGE_CLASS', '');
-define("CONF_MESSAGE_INFO", '');
+define("CONF_MESSAGE_WARNING",'warning');
+define("CONF_MESSAGE_SUCCESS",'success');
+define("CONF_MESSAGE_ERROR", 'error');
+define('CONF_MESSAGE_CLASS', 'message');
+define("CONF_MESSAGE_INFO", 'info');
 
 ################
 ### PASSWORD ###

@@ -1,0 +1,91 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+form{
+    max-width: 1300px;
+    max-height: 2000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "fabricante produto"
+    ;
+    
+}
+
+.grid-left{
+    grid-area: 'fabricante';
+
+}
+
+.grid-left h1{
+    color: rgb(27, 27, 155);
+}
+
+.grid-left span{
+    font-size: .9em;
+    color: rgb(27, 27, 155);
+    display: block;
+    font-weight: 900;
+    margin: 10px 0px;
+}
+
+.grid-left input{
+    padding: 15px 10px;
+    margin: 10px 0px;
+    display: block;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid;
+    
+}
+
+.grid-right{
+    grid-area: 'produto';
+
+}
+.grid-right h1{
+    color: rgb(27, 27, 155);
+}
+
+.grid-right span{
+    font-size: .9em;
+    color: rgb(27, 27, 155);
+    display: flex;
+    font-weight: 900;
+    margin: 10px 0px;
+}
+
+.grid-right input{
+    padding: 15px 10px;
+    margin: 10px 0px;
+    display: flex;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid;
+    
+}
+
+.btn-enviar{
+    padding:10px 20px;
+    background-color:rgb(27, 27, 155);
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media (max-width: 900px)
+{
+    form{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "fabricante"
+        "produto"
+        ;
+        
+    }
+}

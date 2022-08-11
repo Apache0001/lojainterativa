@@ -94,7 +94,7 @@ function csrf_input(): string
 function csrf_verify($request):bool
 {
     $session = new \Source\core\Session();
-    if(empty($session->csrf_token) || empty($request['csrf']) || $request['csrf'] != $session->csrf_input){
+    if(empty($session->csrf_token) || empty($request['csrf']) || $request['csrf'] != $session->csrf_token){
         return false;
     }
     return true;
@@ -152,4 +152,14 @@ function asset(string $path = null, $theme = CONF_VIEW_THEME): string
         return CONF_URL_BASE . "/themes/{$theme}/assets" . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
     }
     return CONF_URL_BASE. "/themes/{$theme}/assets";
+}
+
+function fabricante(int $id){
+    $fabricante = (new \Source\Models\Fabricante)->findById($id);
+    return $fabricante->nome;
+}
+
+function categoria(int $id){
+    $categoria = (new \Source\Models\Categoria)->findById($id);
+    return $categoria->nome;
 }
